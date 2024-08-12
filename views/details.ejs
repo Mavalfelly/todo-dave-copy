@@ -6,26 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    
+    <form action="/todo/<%=todo._id%>?_method=PUT" method="PoSt">
         <fieldset>
             <legend> Edit a todo</legend>
 
             <label>
-                Name: <input value<%=todo.name%> name="text" placeholder="enter a todo" />
+                Name: <input value = "<%=todo.text%>"" type = "text" name="text" placeholder="enter a todo" />
                 
             </label>
             <br>
             <label>
-                Duration: <input value<%=todo.duration%> type="number" name="duration" />
+                Duration: <input value = "<%=todo.duration%>" type="number" name="duration" />
                 
             </label>
             <br>
             <label>
-                Is Complete: <input value<%=todo.isComplete ? "checked" : ""%> type="checkbox" name="isComplete"   />
+                Is Complete: <input value = "<%=todo.isComplete ? "checked" : ""%>" type="checkbox" name="isComplete"   />
                 
             </label>
         </fieldset>
-        <input type="submit" value="Edit Todo"/>
+        <input type="submit" value="Edit Todo"/></a>
+        
+    </form>
+    <a href="/todo"><button>Back</button></a>
+    <form action="/todo/<%=todo._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete"/>
     </form>
 </body>
 </html>
