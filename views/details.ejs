@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend> Edit a todo</legend>
+
+            <label>
+                Name: <input value<%=todo.name%> name="text" placeholder="enter a todo" />
+                
+            </label>
+            <br>
+            <label>
+                Duration: <input value<%=todo.duration%> type="number" name="duration" />
+                
+            </label>
+            <br>
+            <label>
+                Is Complete: <input value<%=todo.isComplete ? "checked" : ""%> type="checkbox" name="isComplete"   />
+                
+            </label>
+        </fieldset>
+        <input type="submit" value="Edit Todo"/>
+    </form>
+</body>
+</html>
